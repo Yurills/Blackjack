@@ -1,0 +1,101 @@
+body {
+    text-align: center;
+    margin:0;
+    padding:0;
+}
+
+/*main box*/
+#dealer_card img {
+    width: 200px; height: auto; margin: 2px
+}
+#player_card {
+    position:relative; height:284.61px; margin: auto;
+}
+#player_card img {
+    width: 200px; height: auto; margin: 2px
+}
+#hit {
+    width: 150px; height: 50px; margin: 0px 10px; font-size: 25px;letter-spacing: 0.1em;color: aliceblue;
+    text-transform: uppercase;padding: 10px 30px; border:none;background-color: rgb(43, 43, 43);
+}
+#hit:hover {
+    background: light;letter-spacing: 0.25em;
+    box-shadow: 0 0 20px cornflowerblue;
+    background-color: cornflowerblue;
+}
+
+#stand {
+    width: 200px; height: 50px; margin: 0px 10px; font-size: 25px;letter-spacing: 0.1em;color: aliceblue;
+    text-transform: uppercase;padding: 10px 30px; border:none;background-color: rgb(43, 43, 43);
+    transition: 0.5s;
+    
+}
+#stand:hover {
+    background: light;letter-spacing: 0.25em;
+    box-shadow: 0 0 20px rgb(201, 79, 146);
+    background-color: rgb(201, 79, 146);}
+#end {
+    width: 150px; height: 50px; margin: 0px 10px; font-size: 25px;letter-spacing: 0.1em;color: aliceblue;
+    text-transform: uppercase;padding: 10px 30px; border:none;background-color: rgb(43, 43, 43);
+    transition: 0.5s;
+}
+#end:hover {
+    background: light;letter-spacing: 0.25em;
+    box-shadow: 0 0 20px rgb(185, 70, 70);
+    background-color: rgb(185, 70, 70);}
+#hit:disabled {
+    background-color: grey;
+    pointer-events: none;
+        
+    }
+#stand:disabled {
+    background-color: grey;
+    pointer-events: none;
+    
+}
+#end:disabled {
+    background-color: grey;
+    pointer-events: none;
+    
+}
+/*card flipping effect*/
+.hidden_card {
+    display: inline-block;
+    width: 200px;
+    height: 284.61px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+.hidden_card:hover{
+    transform: rotateY(180deg)
+}
+#front {
+    position: absolute;width: 100%;height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+
+}
+#back {
+    position: absolute;width: 100%;height: 100%;
+    backface-visibility: hidden;
+    
+    
+
+}
+
+#end_banner {
+    margin: auto;
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 600px;
+    background-color: black;
+    z-index: 99;
+}
+
+#condition {
+    display:inline-block;
+    color: aliceblue;
+    margin: auto;
+    font-size: 220px;
+}
